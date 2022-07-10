@@ -1,0 +1,38 @@
+.addsong,.addartist{
+    background-color: rgb(200, 253, 255);
+    color: black;
+    width: 800px;
+    height: 400px;
+    margin: 100px;
+    border: solid rgb(3, 60, 247) 2px;
+    outline: solid 2px white;
+}
+.addsong{
+position: absolute;
+}
+.addsong input,.addartist input{
+    margin: 10px;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+}
+.addsong input:focus,.addartist input:focus{
+    border: none;
+    outline: solid 1px navy;
+}
+.addsong button,.addartist button{
+    height: 35px;
+    width: 100px;
+    margin: 10px;
+}
+.addsong button:hover,.addartist button:hover{
+    background-color: #fff;
+    border:solid 1px rgb(81, 81, 255);
+}
+.addartist{
+    position: relative;
+    margin: 170px;
+    width: 600px;
+    height: 300px;
+    display: none;
+}

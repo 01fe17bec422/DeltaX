@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" onmouseover="m1f()">
+<head>
+    <title>DeltaX Assignment</title>
+    <link rel="stylesheet" href="../Css/index.css">
+    <link rel="icon" href="../Images/icon.png">
+    <link rel="stylesheet" href="../Css/home.css">
+    <script src="https://kit.fontawesome.com/4a79555051.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="parent">
+        <div class="leftMenu">
+            <div class="heading">
+                <a href=""><img src="../Images/Symbol.jpg" alt=""></a>
+                <a href=""><h1 class="header">Spotify</h1></a>
+            </div>
+            <div class="optgroup">
+                <div class="options home">
+                    <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+                    <a href="./index.html">Home</a>
+                </div>
+                <div class="options search">
+                    <a href="./search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="./search.html">Search</a>
+                </div>
+                <div class="options library">
+                    <a href=""><i class="fa-solid fa-book"></i></a>
+                    <a href="">Your Library</a>
+                </div>
+                <div class="options playlist">
+                    <a href=""><i class="fa-regular fa-square-plus"></i></a>
+                    <a href="">Create Playlist</a>
+                </div>
+            </div>
+        </div>
+        <div class="rightBar">
+            <nav>
+                <div class="nav-arrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <p>Premium</p>
+                <p>Support</p>
+                <p>Download</p>
+                <p>Signup</p>
+                <p>|</p>
+                <p class="login">Login</p>
+            </nav>
+            <div class="songshead">
+                <h3>Top 5 Songs</h3>
+                <a href="./addsong.html"><button>+ Add Song</button></a>
+                <a href="./dropsong.html"><button>+ Delete Song</button></a>
+            </div><hr>
+            <div>
+                <table>
+                    <tr>
+                        <th>ArtWork</th>
+                        <th>Song</th>
+                        <th>Year of Release</th>
+                        <th>Artist</th>
+                        <th>Rate</th>
+                    </tr>
+                    <tbody id="songdetails" class="tbody"></tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="artisthead">
+                <h3>Top 5 Artists</h3>
+            </div>
+            <hr>
+            <div class="artistbio">
+                <table>
+                    <tr>
+                        <th>Artists</th>
+                        <th>Date of Birth</th>
+                        <th>Songs</th>
+                    </tr>
+                    <tbody id="artistbio"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../Js/index.js"></script>
+</body>
+</html>

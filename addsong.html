@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DeltaX Assignment</title>
+    <link rel="stylesheet" href="../Css/index.css">
+    <link rel="icon" href="../Images/icon.png">
+    <link rel="stylesheet" href="../Css/addsong.css">
+    <script src="https://kit.fontawesome.com/4a79555051.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="parent">
+        <div class="leftMenu">
+            <div class="heading">
+                <a href=""><img src="../Images/Symbol.jpg" alt=""></a>
+                <a href=""><h1 class="header">Spotify</h1></a>
+            </div>
+            <div class="optgroup">
+                <div class="options">
+                    <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+                    <a href="./index.html">Home</a>
+                </div>
+                <div class="options">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="">Search</a>
+                </div>
+                <div class="options">
+                    <a href=""><i class="fa-solid fa-book"></i></a>
+                    <a href="">Your Library</a>
+                </div>
+                <div class="options">
+                    <a href=""><i class="fa-regular fa-square-plus"></i></a>
+                    <a href="">Create Playlist</a>
+                </div>
+            </div>
+        </div>
+        <div class="rightBar">
+            <nav>
+                <div class="nav-arrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <p>Premium</p>
+                <p>Support</p>
+                <p>Download</p>
+                <p>Signup</p>
+                <p>|</p>
+                <p class="login">Login</p>
+            </nav>
+            <!-- <form> -->
+                <div class="addsong">
+                    <h3>+ Add New Song</h3>
+                    <hr>
+                    Add new Song: <input type="text" required placeholder="Add new Song" id="songname"><br>
+                    Year of Release: <input type="text" required placeholder="Year of Release" id="year"><br>
+                    Artist: <input list="data" placeholder="Artist" onclick="showartistf()" required id="artistname">
+                    <button onclick="addartistf()">+ Add Artist</button><br>
+                    <datalist id="data"></datalist>
+                    Add Image: <input type="file" id="imgurl"><br>
+                    <button onclick="addsongf()">Save</button>
+                    <button type="reset">Reset</button>
+                    <a href="./index.html"><button>Cancel</button></a>
+                </div>
+            <!-- </form> -->
+            <!-- <form action=""> -->
+                <div class="addartist" id="addartist">
+                    <h3>+ Add Artist</h3>
+                    <hr>
+                    Artist Name: <input type="text" placeholder="Artist Name" required id="artname"><br>
+                    Date of Birth: <input type="date" placeholder="Date of Birth" required id="dob"><br>
+                    Bio: <textarea name="" id="" cols="40" rows="5" placeholder="Bio"></textarea><br>
+                    <button onclick="newartistf()">Save</button>
+                    <button onclick="hideartistf()">Cancel</button>
+                </div>
+            <!-- </form> -->
+        </div>
+    </div>
+    <script src="../Js/index.js"></script>
+</body>
+</html>
