@@ -1,10 +1,10 @@
 //index page
-let artistdetails=[{aname:"arjit",img:"../Images/arijit-singh.jpg",dob:"25 Apr 1987",songs:["muskurane ki wajah","Abaad Barbaad","han mai galat"],dates:[2016,2020,2019]},
-            {aname:"ravi",img:"../Images/ravi-basrur.jpg",dob:"01 Jan 1984",songs:["sultaana","toofan","deerana","ugram veeram"],dates:[2016,2020,2019]},
-            {aname:"aditi",img:"../Images/aditi.jpg",dob:"15 jan 2005",songs:["monstar","mahadav"],dates:[2022,2018]},
-            {aname:"vijay",img:"../Images/Vijay-Prakash.jpg",dob:"21 Feb 1976",songs:["kaali quater","bombe helutte","adhyaksha"],dates:[2016,2019,2014]},
-            {aname:"sanjit",img:"../Images/Sanjith-Hegde-Picture.jpg",dob:"3 Oct 1998",songs:["matte maleyaagide","maretu hoyite"],dates:[2019,2018]},
-            {aname:"arman",img:"../Images/arman.jpg",dob:"22 Jul 1995",songs:["sariyagi nenapide","kushiyaagide"],dates:[2016,2016]}];
+let artistdetails=[{aname:"arjit",img:"./arijit-singh.jpg",dob:"25 Apr 1987",songs:["muskurane ki wajah","Abaad Barbaad","han mai galat"],dates:[2016,2020,2019]},
+            {aname:"ravi",img:"./ravi-basrur.jpg",dob:"01 Jan 1984",songs:["sultaana","toofan","deerana","ugram veeram"],dates:[2016,2020,2019]},
+            {aname:"aditi",img:"./aditi.jpg",dob:"15 jan 2005",songs:["monstar","mahadav"],dates:[2022,2018]},
+            {aname:"vijay",img:"./Vijay-Prakash.jpg",dob:"21 Feb 1976",songs:["kaali quater","bombe helutte","adhyaksha"],dates:[2016,2019,2014]},
+            {aname:"sanjit",img:"./Sanjith-Hegde-Picture.jpg",dob:"3 Oct 1998",songs:["matte maleyaagide","maretu hoyite"],dates:[2019,2018]},
+            {aname:"arman",img:"./arman.jpg",dob:"22 Jul 1995",songs:["sariyagi nenapide","kushiyaagide"],dates:[2016,2016]}];
 
 let x=0
 let songdetails=document.getElementById("songdetails");
@@ -32,7 +32,7 @@ function m1f(){
                 std4.innerHTML=a.aname;
                 str1.append(std4);
                 let std5=document.createElement("td")
-                std5.innerHTML="rate"
+                std5.innerHTML=`<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>`
                 str1.append(std5);
                 songdetails.append(str1);
                 let atr1=document.createElement("tr");
@@ -93,4 +93,53 @@ function newartistf(){
     let artname=document.getElementById("artname");
     let artdob=document.getElementById("dob");
     artistdetails.push({aname:artname.value,img:"",dob:artdob.value,songs:[],dates:[]})
+}
+//search artist
+function searchartistf(){
+    let found=document.getElementById("found");
+    let search=document.getElementById("search");
+    let error=document.getElementById("error");
+    let get=artistdetails.map(a=>{
+        if(a.aname==search.value){
+            error.style.display="none";
+            return found.innerHTML=`<table>
+                                <tr>
+                                    <th>ArtWork</th>
+                                    <th>Song</th>
+                                    <th>Year of Release</th>
+                                    <th>Artist</th>
+                                    <th>Rate</th>
+                                </tr>
+                                <tr>
+                                    <td><img src="${a.img}" alt="no image"></td>
+                                    <td>${a.songs.toString()}</td>
+                                    <td>${a.dates.toString()}</td>
+                                    <td>${a.aname}</td>
+                                    <td><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></td>
+                                </tr>
+                            </table>`
+        }
+        else{
+            return -1;
+        }
+    })
+    if(get.every(a=>{return a==-1})){
+        error.style.display="block";
+    }
+}
+//dropartist
+
+function dropartistf(){
+    let drop=document.getElementById("drop");
+    let error=document.getElementById("error");
+    let drop_div=document.getElementById("drop_div");
+    if(artistdetails.findIndex(a=>{return a.aname==drop.value;})!=-1){
+        artistdetails.splice(artistdetails.findIndex(a=>{return a.aname==drop.value;}),1);
+        drop_div.style.display="block"
+        error.style.display="none";
+    }
+    else{
+        drop_div.style.display="none";
+        error.style.display="block";
+    }
 }

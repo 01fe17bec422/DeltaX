@@ -1,0 +1,9 @@
+.rightBar .drop{
+    text-align: center;
+    margin-top: 200px;
+    display: none;
+}
+.rightBar .drop i{
+    background-color: rgb(47, 255, 47);
+    color: yellow;
+}

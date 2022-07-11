@@ -1,0 +1,63 @@
+.rightBar input{
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+.rightBar input:focus{
+    border: none;
+}
+.rightBar button:hover{
+    background-color: #fff;
+}
+.rightBar button{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(0, 166, 255);
+    border-radius: 10px;
+    font-size: 20px;
+}
+.rightBar .error{
+    text-align: center;
+    margin-top: 200px;
+    display: none;
+}
+.rightBar .error i{
+    background-color: yellow;
+    color: red;
+}
+.rightBar table{
+    width: 800px;
+    border: solid 2px white;
+    margin: 100px;
+    text-align: center;
+    background-color: rgb(0, 26, 39);
+}
+.rightBar table th{
+    background-color: black;
+    height: 40px;
+}
+.rightBar table tr{
+    margin-top: 20px;
+}
+.rightBar table td{
+    border: solid 1px navy;
+}
+.rightBar .founded img{
+    width: 200px;
+    height: 180px;
+    margin: 20px;
+    transition: all 0.6s;
+}
+.rightBar .founded img:hover{
+    transform: scale(1.1);
+    outline: solid 2px white;
+}
+.artistbio tr{
+    height: 80px;
+}
+.artisthead{
+    margin-left: 100px;
+}
